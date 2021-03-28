@@ -6,7 +6,7 @@ const FeedbackForm = ({ env }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formSubmitSuccessful, setFormSubmitSuccessful] = useState(false);
 
-  const senderEmail = 'sender@example.com';
+  const senderEmail = 'kromeshnik05@gmail.com';
 
   const handleCancel = () => {
     setFeedback('');
@@ -47,7 +47,7 @@ const FeedbackForm = ({ env }) => {
   }) => {
     window.emailjs
       .send(
-        'default_service',
+        "service_2hlsyh9",
         templateId,
         {
           senderEmail,
@@ -62,7 +62,7 @@ const FeedbackForm = ({ env }) => {
         }
       })
       // Handle errors here however you like
-      .catch((err) => console.error('Failed to send feedback. Error: ', err));
+      .catch((err) => console.error("Failed to send feedback. Error: ", err));
   };
 
   if (formSubmitted && formSubmitSuccessful) {
